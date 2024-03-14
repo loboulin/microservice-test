@@ -1,4 +1,4 @@
-sudo docker build -t produit-service:latest ./Dockerfile-produit
-sudo docker build -t commande-service:latest ./Dockerfile-commande
+sudo docker build -t produit-service:latest ./Dockerfile
+sudo docker build -t commande-service:latest ./Dockerfile
 
 sudo docker-compose up -d

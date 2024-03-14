@@ -6,5 +6,6 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
-../ms-commande/node_modules/
-../ms-produit/node_modules/
+
+/ms-commande/node_modules/
+/ms-produit/node_modules/
