@@ -15,10 +15,9 @@ const produitSchema = new mongoose.Schema({
     },
     created_at: {
         type: Date,
-        required: true,
     },
+}, { collection: 'produit' }); // Définition explicite du nom de la collection
 
-});
 produitSchema.pre('save', function(next) {
     if (!this.created_at) {
         this.created_at = new Date();

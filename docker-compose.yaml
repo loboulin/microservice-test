@@ -4,14 +4,12 @@ services:
   mongodb:
     image: mongo
     container_name: mongo-server
+    hostname: mongo-server
     restart: always
     ports:
       - "27017:27017"
-    environment:
-      - MONGO_INITDB_ROOT_USERNAME=alice
-      - MONGO_INITDB_ROOT_PASSWORD=super-secret-password
     volumes:
-      - mongo_data:/data/db
+      - ./mongo_data:/data/db
     networks:
       - app-network
 
@@ -39,7 +37,6 @@ services:
 
 networks:
   app-network:
-    driver: host
 
 volumes:
   mongodb_data:
