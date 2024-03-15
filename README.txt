@@ -1,9 +1,4 @@
-cd produit-service
-sudo docker build -t produit-service:latest .
-cd..
+docker build -t produit-service:latest ms-produit
+docker build -t commande-service:latest ms-commande
 
-cd commande-service
-sudo docker build -t commande-service:latest .
-cd ..
-
-sudo docker-compose up -d
+docker-compose up -d
